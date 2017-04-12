@@ -1,3 +1,10 @@
+$(function () {
+     $('score', 'question').removeClass('hidden');
+ });
+
+
+
+
 (function() {
   var questions = [{
     question: "What is the relationship between Ana and Phara?",
@@ -20,3 +27,5 @@
     choices: ["Ana", "Reaper", "Reinhardt", "Lucio",],
     correctAnswer: "Reinhardt"
   }];
+
+  
