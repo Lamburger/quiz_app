@@ -43,3 +43,11 @@ p {
 	margin-bottom: 20px;
 	float: right;
 }
+
+#score {
+  display: hidden;
+}
+
+#question {
+  display: hidden;
+}
