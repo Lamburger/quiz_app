@@ -1,12 +1,24 @@
-$(function () {
-     $('score', 'question').removeClass('hidden');
- });
 
 
+function handleStartQuiz(){
+    // hide start quiz button
+    // show questions
+    // show counter
+    // show prev, next
 
+    $('#check').addClass('hidden');
+    $('#score').removeClass ('hidden');
+    $('#question').removeClass ('hidden');
+    $('#next').removeClass ('hidden');
+    $('#prev').removeClass ('hidden');
+}
+
+
+$('#check').click(handleStartQuiz);
 
 (function() {
-  var questions = [{
+
+      var questions = [{
     question: "What is the relationship between Ana and Phara?",
     choices: ["They're Sisters", "They are Cousins", "They're not related!", "Mother and daughter",],
     correctAnswer: "Mother and daughter"
@@ -27,5 +39,10 @@ $(function () {
     choices: ["Ana", "Reaper", "Reinhardt", "Lucio",],
     correctAnswer: "Reinhardt"
   }];
+
+});
+
+
+
 
   
