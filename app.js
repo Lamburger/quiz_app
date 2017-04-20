@@ -3,14 +3,6 @@ var state = {
 };
 
 
-var correctUserAnswer = 0;
-
-
-function userSelection(){
-
-    if(questions[state.currentQuestion].correctAnswer === true) 
-        correctUserAnswer++;
-}
 
 function handleStartQuiz(){
     // hide start quiz button
@@ -24,7 +16,7 @@ function handleStartQuiz(){
     $('#next').removeClass ('hidden');
     $('#radioButtons').removeClass ('hidden');
 
-    $('#score1').text(correctUserAnswer);
+
     
     // var question1 = questions[0];
 
@@ -49,11 +41,29 @@ function handleNext() {
     // show next question
     // show next choices
 
-    if( true /* should only do this if currentQuestion is within range of questions */ ) {
 
-    
+    if( state.currentQuestion < questions.length -1 /* should only do this if currentQuestion is within range of questions */ ) {
 
+
+
+
+
+
+
+var correctUserAnswer = 0;
     
+if($("input[name='choices']") === questions[state.currentQuestion].correctAnswer) 
+        correctUserAnswer++;
+    
+    $('#score1').text(correctUserAnswer);
+
+
+
+
+
+
+
+
 
         state.currentQuestion++;
 
@@ -66,15 +76,6 @@ function handleNext() {
             $('#next').addClass('hidden');
         }
     }
-
-}
-
-function handlePrev(){
-
-   state.currentQuestion--;
-
-   setQuestions(); 
-
 
 }
 
@@ -106,4 +107,3 @@ var questions = [{
 
 $('#check').click(handleStartQuiz);
 $('#next').click(handleNext);
-$('#prev').click(handlePrev);
