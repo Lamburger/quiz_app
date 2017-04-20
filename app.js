@@ -52,7 +52,7 @@ function handleNext() {
 
 var correctUserAnswer = 0;
     
-if($("input[name='choices']") === questions[state.currentQuestion].correctAnswer) 
+if ("input[name='choices']" === questions[state.currentQuestion].correctAnswer) 
         correctUserAnswer++;
     
     $('#score1').text(correctUserAnswer);
@@ -64,16 +64,12 @@ if($("input[name='choices']") === questions[state.currentQuestion].correctAnswer
 
 
 
-
         state.currentQuestion++;
-
-
+        
         setQuestions();
 
-
-
-        if (state.currentQuestion >= questions.length -1) {
-            $('#next').addClass('hidden');
+    if (state.currentQuestion >= questions.length -1) {
+        
         }
     }
 
