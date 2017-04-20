@@ -39,7 +39,7 @@ h2{
 	color: PaleTurquoise ;
 
 }
-p {
+#score {
 	margin-bottom: 20px;
 	float: right;
 }
@@ -53,5 +53,5 @@ p {
     color: black;
     margin-left: 30%;
     text-align: center;
-    float: left
+    
 }

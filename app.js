@@ -1,3 +1,17 @@
+var state = {
+  currentQuestion: 0
+};
+
+
+var correctUserAnswer = 0;
+
+
+function userSelection(){
+
+    if(questions[state.currentQuestion].correctAnswer === true) 
+        correctUserAnswer++;
+}
+
 function handleStartQuiz(){
     // hide start quiz button
     // show questions
@@ -8,13 +22,61 @@ function handleStartQuiz(){
     $('#score').removeClass ('hidden');
     $('#question').removeClass ('hidden');
     $('#next').removeClass ('hidden');
-    
-    var question1 = questions[0];
+    $('#radioButtons').removeClass ('hidden');
 
-    $('#question').text(question1.question);
+    $('#score1').text(correctUserAnswer);
     
+    // var question1 = questions[0];
+
+   
+setQuestions();
+
 }
 
+
+function setQuestions() {
+     $('#question').text(questions[state.currentQuestion].question);
+
+    $("input[value='0']").next().text(questions[state.currentQuestion].choices[0]);
+    $("input[value='1']").next().text(questions[state.currentQuestion].choices[1]);
+    $("input[value='2']").next().text(questions[state.currentQuestion].choices[2]);
+    $("input[value='3']").next().text(questions[state.currentQuestion].choices[3]);
+}
+
+
+function handleNext() {
+    // show prev button
+    // show next question
+    // show next choices
+
+    if( true /* should only do this if currentQuestion is within range of questions */ ) {
+
+    
+
+    
+
+        state.currentQuestion++;
+
+
+        setQuestions();
+
+
+
+        if (state.currentQuestion >= questions.length -1) {
+            $('#next').addClass('hidden');
+        }
+    }
+
+}
+
+function handlePrev(){
+
+   state.currentQuestion--;
+
+   setQuestions(); 
+
+
+}
 
 
 var questions = [{
@@ -43,3 +105,5 @@ var questions = [{
 
 
 $('#check').click(handleStartQuiz);
+$('#next').click(handleNext);
+$('#prev').click(handlePrev);
