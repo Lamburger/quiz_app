@@ -3,16 +3,15 @@
 }
 
 body {
-  background-image: url("https://images8.alphacoders.com/696/696859.jpg");
+  background: url("https://images8.alphacoders.com/696/696859.jpg") no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
 
 }
 
 h1 {
 	font-family: 'Play', sans-serif;
 	font-size: 80px;
-	color: PaleTurquoise;
+	color: White;
 	text-align: center;
 }
 
@@ -28,7 +27,7 @@ button{
 
 div {
 	font-size: 20px;
-	color: PaleTurquoise;
+	color: White;
 }
 
 h2{
@@ -36,12 +35,12 @@ h2{
 	margin-top: 80px;
 	text-align: center;
 	font-size: 30px;
-	color: PaleTurquoise ;
+	color: White ;
 
 }
 #score {
-	margin-bottom: 20px;
-	float: right;
+	text-align: center;
+	
 }
 
 .hidden { display: none; }
@@ -54,4 +53,18 @@ h2{
     margin-left: 30%;
     text-align: center;
     
+}
+
+#radioButtons{
+text-align: center;
+}
+
+#next{
+	text-align: right;
+	position: relative;
+	left: 400px ;
+}
+
+p{
+	display:inline;
 }
